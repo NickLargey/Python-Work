@@ -1,2 +1,2 @@
 # Python-Work
-Scripts written to automate mainly data entry tasks
+Scripts written to automate data entry tasks at work
