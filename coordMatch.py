@@ -44,19 +44,6 @@ def main():
 	compare(PPLXdf, df)
 
 def compare(PPLXdf, df):
-
-	# PPLXdf['Latitude'] = PPLXdf['Latitude'].astype(float)
-	# PPLXdf['Longitude'] = PPLXdf['Longitude'].astype(float)
-
-	# df['_latitude'] = df['_latitude'].astype(float)
-	# df['_longitude'] = df['_longitude'].astype(float)
-
-	# PPLXdf['latLong'] = PPLXdf['Latitude'].map(float) + PPLXdf['Longitude'].map(float)
-
-	# PPLXdf.set_index()
-	# masterdf = PPLXdf.merge(df, left_on=['Latitude', 'Longitude'], right_on=['_latitude', '_longitude'])
-	# masterdf = pd.merge(PPLXdf, df, how='left', left_on=['Latitude', 'Longitude'], right_on=['_latitude', '_longitude'])
-	
 	masterdf = pd.merge(PPLXdf, df, how='left', on=['latLong'])
 	
 	masterdf.drop(['Latitude','Longitude'],axis=1,inplace=True)
